@@ -51,7 +51,7 @@ public class volatileTest {
             //之所以是2 是main和GC线程
             Thread.yield();
         }
- 
+
         System.out.println(Thread.currentThread().getName() + "\t int type, finally number value:" + myData.number);
         System.out.println(Thread.currentThread().getName() + "\t AtomicInteger type finally number value:" + myData.atomicInteger);
 
