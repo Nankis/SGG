@@ -1,3 +1,5 @@
+package jmm;
+
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -35,6 +37,7 @@ public class volatileTest {
      */
     public static void main(String[] args) {
         myData myData = new myData();
+
 //    seeAble();
 
         for (int i = 1; i <= 20; i++) {
@@ -81,5 +84,6 @@ public class volatileTest {
         //如果跳出循环,则会运行到这步
         System.out.println(Thread.currentThread().getName() + "\t mission is over.current number is " + myData.number);
     }
+
 }
 
