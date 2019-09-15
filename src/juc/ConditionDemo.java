@@ -4,6 +4,15 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 线程操作资源类
+ * 1.先创建资源(或拿到)
+ * 2.在资源类里做
+ *    1.判断信号量
+ *    2.干活
+ *    3.通知,改信号量
+ * 3.在主线程创建要创建的线程
+ */
 class ShareResource {
     private int number = 1; //线程 A:1 B:2 C:3
     private Lock lock = new ReentrantLock();
